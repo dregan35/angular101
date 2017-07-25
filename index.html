@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular 101</title>
+</head>
+
+<body ng-app="app">
+    <hi>Welcome To The Magic</hi>
+    <!--  <input type="text" ng-model="coolBinding" placeholder="this input is bound to">
+    <span>this: {{coolBinding.toUpperCase()}}</span>
+
+    <p>{{"Angular" + "js".toUpperCase()}}</p>
+
+    <p>{{a = 5}} here is still</p>
+    <p>that value here? Yup {{a}}</p>
+
+    <p>{{a}} remains five? Nope: {{a = 3}}</p>
+
+    <p>{{alert("Hello, world!")}} no alert, but!</p> 
+
+    <p>There {{count = 4; (count == 1 ? "is" : "are") + count}} of them</p>
+
+    <p ng-init="allowed = false">
+    	The secret code is
+    	<span ng-show="allowed">0123</span>
+    	<span ng-hide="allowed">Not for you to see</span>
+    	<br>
+    	<input type="button" value="toggle" ng-click="allowed = !allowed">
+    </p>	
+ -->
+   <!--  <p ng-controller="MessageController">
+        {{message}}
+    </p>
+    <p ng-controller="CountController">
+        There are {{count()}} months in a year.
+    </p>
+    <div>
+        <p ng-controller="SecondNameController">
+            Inside the scope : {{name}}
+        </p>
+        <p ng-controller="NameController">
+            outside the scope : {{name}} Will this work? : {{wow}}
+        </p>
+    </div> -->
+
+
+    <div class="todo" ng-controller="TodoController">
+    	<h3>Todo list os awesomeness</h3>
+    	<ul>
+    	 <li ng-repeat="todo in todos">
+    		<input type="checkbox" ng-model="todo.completed">
+    		{{todo.name}} 
+    	 </li>
+    	</ul>		
+    </div>
+
+    <div ng-controller="SongController">
+    <h2>These are songs!</h2>
+    <ul>
+    	<li ng-repeat="song in songList">
+    	{{song.title}}, by {{song.artist}}
+    	</li>
+    </ul>
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
